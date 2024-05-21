@@ -32,6 +32,17 @@
                 android:hint="Email"
                 android:textSize="18sp"
                 android:padding="8dp" />
+            <EditText
+                android:id="@+id/signup_username"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:hint="Username"
+                android:textSize="18sp"
+                android:padding="8dp" />
 
             <EditText
                 android:id="@+id/signup_password"

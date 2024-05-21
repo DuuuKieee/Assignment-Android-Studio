@@ -26,6 +26,7 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = binding.signupEmail.getText().toString();
+                String username = binding.signupUsername.getText().toString();
                 String password = binding.signupPassword.getText().toString();
                 String confirmPassword = binding.signupConfirm.getText().toString();
 
@@ -36,7 +37,8 @@ public class SignupActivity extends AppCompatActivity {
                         Boolean checkUserEmail = databaseHelper.checkEmail(email);
 
                         if(checkUserEmail == false){
-                            Boolean insert = databaseHelper.insertData(email, password);
+                            Boolean insert = databaseHelper.insertData(email,username, databaseHelper.hashPassword(password));
+                            //Boolean insert = databaseHelper.insertData(email,username, databaseHelper.hashPassword(password));
 
                             if(insert == true){
                                 Toast.makeText(SignupActivity.this, "Signup Successfully!", Toast.LENGTH_SHORT).show();
@@ -55,6 +57,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
             }
         });
+
 
         binding.loginRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override

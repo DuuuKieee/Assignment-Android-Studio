@@ -33,7 +33,7 @@
                     android:background="@drawable/lavender_border"
                     android:drawableLeft="@drawable/baseline_email_24"
                     android:drawablePadding="8dp"
-                    android:hint="Email"
+                    android:hint="Username"
                     android:padding="8dp"/>
 
                 <EditText
